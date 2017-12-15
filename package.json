@@ -1,0 +1,39 @@
+{
+  "name": "ts-rn-base",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc -w & react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "tsc -w & react-native-scripts android",
+    "ios": "tsc -w & react-native-scripts ios",
+    "pretest": "tslint -p tsconfig.json",
+    "test": "jest -c jest/config.json"
+  },
+  "dependencies": {
+    "expo": "^23.0.4",
+    "react": "16.0.0",
+    "react-native": "0.50.3"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.5",
+    "@types/jest": "^21.1.8",
+    "@types/react": "^16.0.29",
+    "@types/react-native": "^0.51.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.2.2",
+    "jest-cli": "^21.2.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-native-scripts": "1.8.1",
+    "react-test-renderer": "16.0.0",
+    "ts-jest": "^21.2.4",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.6.2"
+  }
+}
