@@ -10,7 +10,7 @@
     "eject": "react-native-scripts eject",
     "android": "tsc -w & react-native-scripts android",
     "ios": "tsc -w & react-native-scripts ios",
-    "pretest": "tslint -p tsconfig.json",
+    "pretest": "tsc --noEmit && tslint -p tsconfig.json",
     "test": "jest -c jest/config.json"
   },
   "dependencies": {
