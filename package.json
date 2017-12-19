@@ -16,13 +16,16 @@
   "dependencies": {
     "expo": "^23.0.4",
     "react": "16.0.0",
-    "react-native": "0.50.3"
+    "react-native": "0.50.3",
+    "react-navigation": "^1.0.0-beta.21",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.5",
     "@types/jest": "^21.1.8",
     "@types/react": "^16.0.29",
     "@types/react-native": "^0.51.2",
+    "@types/react-navigation": "^1.0.26",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.2.2",

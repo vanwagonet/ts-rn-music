@@ -1,1 +1,1 @@
-export default from './lib/App'
+export default from './lib/app'

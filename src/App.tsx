@@ -1,23 +1,42 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import {
+  NavigationComponent,
+  NavigationScreenProps,
+  StackNavigator
+} from 'react-navigation'
+import AlbumsScreen from './albums/screen'
+import { actions, store } from './redux/store'
+import SongsScreen from './songs/screen'
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    flex: 1,
-    justifyContent: 'center'
-  }
-})
+function App (Screen: NavigationComponent) {
+  return class extends React.Component<NavigationScreenProps<any>> {
+    public static navigationOptions = Screen.navigationOptions
 
-export default class App extends React.Component {
-  public render () {
-    return (
-      <View style={styles.container}>
-        <Text>Open up src/App.tsx to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    )
+    public state = store.getState()
+
+    public componentWillMount () {
+      this.componentWillUnmount = store.subscribe(() => {
+        this.setState(store.getState())
+      })
+    }
+
+    public render () {
+      return (
+        <Screen
+          {...this.props}
+          actions={actions}
+          state={this.state}
+        />
+      )
+    }
   }
 }
+
+export default StackNavigator({
+  albums: {
+    screen: App(AlbumsScreen)
+  },
+  songs: {
+    screen: App(SongsScreen)
+  }
+})

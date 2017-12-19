@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album row renders the album image and censored name 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  onPress={[Function]}
+  underlayColor="transparent"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderBottomColor": "#C7CDD1",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "minHeight": 54,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://is5.mzstatic.com/image/thumb/Music7/v4/4b/41/61/4b4161fd-4709-60d3-dedd-5b978ba5a2d9/source/60x60bb.jpg",
+        }
+      }
+      style={
+        Object {
+          "height": 32,
+          "marginRight": 8,
+          "width": 32,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Over the Hedge (Music from the Motion Picture)
+    </Text>
+  </View>
+</TouchableHighlight>
+`;
