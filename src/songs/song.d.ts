@@ -2,14 +2,17 @@ export default interface Song {
   wrapperType: 'track'
   kind: 'song'
   trackId: number
-  trackNam: string
+  trackName: string
   trackCensoredName: string
   trackViewUrl: string
   artworkUrl30: string
   artworkUrl60: string
   artworkUrl100: string
   previewUrl: string
-  radioStationUrl: string
+  radioStationUrl?: string
+  isStreamable?: boolean
+  collectionArtistId?: number
+  collectionArtistName?: string
   collectionId: number
   collectionName: string
   collectionCensoredName: string
