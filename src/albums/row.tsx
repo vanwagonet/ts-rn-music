@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 })
 
 interface Props {
-  album: Album,
+  album: Album
   onPress: (album: Album) => void
 }
 

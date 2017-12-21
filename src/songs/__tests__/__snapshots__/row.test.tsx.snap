@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Song row renders the album image and censored name 1`] = `
+exports[`Song row renders the LOADING state 1`] = `
 <TouchableHighlight
   activeOpacity={0.85}
+  onPress={[Function]}
   underlayColor="transparent"
 >
   <View
@@ -19,12 +20,7 @@ exports[`Song row renders the album image and censored name 1`] = `
       }
     }
   >
-    <Image
-      source={
-        Object {
-          "uri": "http://is5.mzstatic.com/image/thumb/Music7/v4/4b/41/61/4b4161fd-4709-60d3-dedd-5b978ba5a2d9/source/60x60bb.jpg",
-        }
-      }
+    <View
       style={
         Object {
           "height": 32,
@@ -32,7 +28,175 @@ exports[`Song row renders the album image and censored name 1`] = `
           "width": 32,
         }
       }
-    />
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#999999"
+        hidesWhenStopped={true}
+        size="small"
+        style={
+          Object {
+            "height": 32,
+            "position": "absolute",
+            "width": 32,
+          }
+        }
+      />
+      <Svg
+        height={32}
+        preserveAspectRatio="xMidYMid meet"
+        width={32}
+      >
+        <Path
+          d="M8 8 h4.8 v16 h-4.8z M19.2 8 h4.8 v16 h-4.8z"
+          originX={16}
+          originY={16}
+          scale={0.5}
+        />
+      </Svg>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Rockin' the Suburb (feat. William Shatner) [Over the Hedge Version]
+    </Text>
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Song row renders the PLAYING state 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  onPress={[Function]}
+  underlayColor="transparent"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderBottomColor": "#C7CDD1",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "minHeight": 54,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 32,
+          "marginRight": 8,
+          "width": 32,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={false}
+        color="#999999"
+        hidesWhenStopped={true}
+        size="small"
+        style={
+          Object {
+            "height": 32,
+            "position": "absolute",
+            "width": 32,
+          }
+        }
+      />
+      <Svg
+        height={32}
+        preserveAspectRatio="xMidYMid meet"
+        width={32}
+      >
+        <Path
+          d="M8 8 h4.8 v16 h-4.8z M19.2 8 h4.8 v16 h-4.8z"
+          originX={16}
+          originY={16}
+          scale={1}
+        />
+      </Svg>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Rockin' the Suburb (feat. William Shatner) [Over the Hedge Version]
+    </Text>
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Song row renders the STOPPED state 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  onPress={[Function]}
+  underlayColor="transparent"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderBottomColor": "#C7CDD1",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "minHeight": 54,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 32,
+          "marginRight": 8,
+          "width": 32,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={false}
+        color="#999999"
+        hidesWhenStopped={true}
+        size="small"
+        style={
+          Object {
+            "height": 32,
+            "position": "absolute",
+            "width": 32,
+          }
+        }
+      />
+      <Svg
+        height={32}
+        preserveAspectRatio="xMidYMid meet"
+        width={32}
+      >
+        <Path
+          d="M8 8 L24 16 L8 24Z"
+          originX={16}
+          originY={16}
+          scale={1}
+        />
+      </Svg>
+    </View>
     <Text
       accessible={true}
       allowFontScaling={true}

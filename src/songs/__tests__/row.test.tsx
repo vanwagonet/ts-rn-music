@@ -40,8 +40,33 @@ describe('Song row', () => {
     wrapperType: 'track'
   }
 
-  it('renders the album image and censored name', () => {
-    const tree = shallow(<Row song={song} />)
+  it('renders the STOPPED state', () => {
+    const tree = shallow(
+      <Row onPress={jest.fn()} playState='STOPPED' song={song} />
+    )
     expect(tree).toMatchSnapshot()
+  })
+
+  it('renders the LOADING state', () => {
+    const tree = shallow(
+      <Row onPress={jest.fn()} playState='LOADING' song={song} />
+    )
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders the PLAYING state', () => {
+    const tree = shallow(
+      <Row onPress={jest.fn()} playState='PLAYING' song={song} />
+    )
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('calls back with the song when pressed', () => {
+    const onPress = jest.fn()
+    const tree = shallow(
+      <Row onPress={onPress} playState='STOPPED' song={song} />
+    )
+    tree.find('TouchableHighlight').simulate('Press')
+    expect(onPress).toHaveBeenCalledWith(song)
   })
 })
